@@ -126,3 +126,13 @@ STATIC_URL = '/static/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+
+# Password reset email settings
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django_ses.SESBackend'
+# AWS_ACCESS_KEY_ID = 'AKIAW7VTMGW7XSB3SCHK'
+# AWS_SECRET_ACCESS_KEY = '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'
+# AWS_SES_REGION_NAME = 'us-west-2' #(ex: us-east-2)
+# AWS_SES_REGION_ENDPOINT ='email.us-west-2.amazonaws.com' #(ex: email.us-east-2.amazonaws.com)

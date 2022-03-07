@@ -15,4 +15,9 @@
     <input type="submit" value="login"/>
     <input type="hidden" name="next" value="{{ next }}"/>
 </form>
+<p><a href="{% url 'password_reset' %}" role="button">Forget your password?</a></p>
+
+<br />
+<p>New to EFS?</p>
+<p><a class="btn btn-default" href="{% url 'portfolio:register' %}" role="button">Create Account</a></p>
 {% endblock %}

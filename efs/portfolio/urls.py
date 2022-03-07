@@ -3,6 +3,7 @@ from . import views
 from django.urls import path
 from rest_framework.urlpatterns import format_suffix_patterns
 
+
 app_name = 'portfolio'
 urlpatterns = [
     path('', views.home, name='home'),
@@ -20,6 +21,8 @@ urlpatterns = [
     path('investment/<int:pk>/delete/', views.investment_delete, name='investment_delete'),
     path('customer/<int:pk>/portfolio/', views.portfolio, name='portfolio'),
     url(r'^customers_json/', views.CustomerList.as_view()),
+    path("register", views.register_request, name="register"),
+    path("password_reset", views.password_reset_request, name="password_reset")
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
